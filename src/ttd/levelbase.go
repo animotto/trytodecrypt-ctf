@@ -30,6 +30,7 @@ func NewLevel(id int, api TTD, logger *log.Logger) (LevelInterface, error) {
     case 3: return Level03{LevelBase{id, api, logger}}, nil
     case 4: return Level04{LevelBase{id, api, logger}}, nil
     case 5: return Level05{LevelBase{id, api, logger}}, nil
+    case 6: return Level06{LevelBase{id, api, logger}}, nil
     default: return nil, errors.New("Level " + strconv.Itoa(id) + " is not implemented")
   }
 }
